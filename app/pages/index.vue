@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import { Drill } from 'lucide-vue-next';
+
+const items = [
+    'https://picsum.photos/468/468?random=1',
+    'https://picsum.photos/468/468?random=2',
+    'https://picsum.photos/468/468?random=3',
+    'https://picsum.photos/468/468?random=4',
+    'https://picsum.photos/468/468?random=5',
+    'https://picsum.photos/468/468?random=6'
+]
 </script>
 
 <template>
@@ -46,7 +55,20 @@ import { Drill } from 'lucide-vue-next';
         </section>
         <section>
             <h2 class=" text-center text-2xl md:text-4xl font-title text-slate-700">Our Work</h2>
-            <p class=" text-center px-5 md:w-2/3 md:mx-auto font-body mt-5 text-gray-600">A showcase of our dedication to quality.</p>
+            <p class=" text-center px-5 md:w-2/3 md:mx-auto font-body mt-5 text-gray-600">A showcase of our dedication
+                to quality.</p>
+            <div class=" mt-10">
+                <UCarousel v-slot="{ item }" loop auto-scroll :items="items" :ui="{ item: 'basis-1/4' }">
+                    <img :src="item" width="500" height="300" class="rounded-xl">
+                </UCarousel>
+            </div>
+        </section>
+        <section class=" bg-[#F5EFE1]">
+            <h2 class=" text-center text-2xl md:text-4xl font-title text-slate-700">What our Clients Say</h2>
+            <p class=" text-center px-5 md:w-2/3 md:mx-auto font-body mt-5 text-gray-600">Building trust, one project at a time.</p>
+            <div class=" mt-10">
+                
+            </div>
         </section>
     </div>
 </template>
