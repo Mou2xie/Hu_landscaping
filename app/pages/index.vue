@@ -1,13 +1,36 @@
 <script setup lang="ts">
 import { Drill, BadgeCheck, Shield, CircleDollarSign, Mail, Phone, Fence, Sprout, Snowflake } from 'lucide-vue-next';
 
-const items = [
-    'https://picsum.photos/468/468?random=1',
-    'https://picsum.photos/468/468?random=2',
-    'https://picsum.photos/468/468?random=3',
-    'https://picsum.photos/468/468?random=4',
-    'https://picsum.photos/468/468?random=5',
-    'https://picsum.photos/468/468?random=6'
+const imageArr1 = [
+    '/1.png',
+    '/2.png',
+    '/3.png',
+    '/4.png',
+    '/5.png',
+    '/6.png',
+    '/7.png',
+    '/8.png',
+    '/9.png',
+    '/10.png',
+    '/11.png',
+    '/12.png',
+    '/13.png',
+];
+
+const imageArr2 = [
+    '/14.png',
+    '/15.png',
+    '/16.png',
+    '/17.png',
+    '/18.png',
+    '/19.png',
+    '/20.png',
+    '/21.png',
+    '/22.png',
+    '/23.png',
+    '/24.png',
+    '/25.png',
+    '/26.png',
 ]
 </script>
 
@@ -61,13 +84,13 @@ const items = [
             <p class=" text-center px-5 md:w-2/3 md:mx-auto font-body mt-5 text-gray-600">A showcase of our dedication
                 to quality.</p>
             <div class=" mt-10 space-y-10">
-                <UCarousel v-slot="{ item }" loop :auto-scroll="{ direction: 'backward', speed: 1 }" :items="items"
+                <UCarousel v-slot="{ item }" loop :auto-scroll="{ direction: 'backward', speed: 1 }" :items="imageArr1"
                     :ui="{ item: 'basis-1/4' }">
-                    <img :src="item" width="500" height="300" class="rounded-xl">
+                    <NuxtImg :src="item" width="600" height="500" fit="cover" class="rounded-xl shadow " />
                 </UCarousel>
-                <UCarousel v-slot="{ item }" loop :auto-scroll="{ speed: 1 }" :items="items"
+                <UCarousel v-slot="{ item }" loop :auto-scroll="{ speed: 1 }" :items="imageArr2"
                     :ui="{ item: 'basis-1/4' }">
-                    <img :src="item" width="500" height="300" class="rounded-xl">
+                    <NuxtImg :src="item" width="600" height="500" fit="cover" class="rounded-xl shadow" />
                 </UCarousel>
             </div>
         </section>
@@ -77,38 +100,40 @@ const items = [
                 a time.</p>
             <div class=" grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 px-10 md:w-4/5 md:mx-auto mt-10">
                 <div class=" flex flex-col justify-between p-5 bg-white h-52 rounded-xl shadow-md">
-                    <p class=" font-body text-slate-500 ">"The new deck is absolutely fantastic! The
-                        craftsmanship is top-notch and the team was professional from start to finish. Highly
-                        recommended!"</p>
+                    <p class=" font-body text-slate-500 ">" You built our new deck last summer, the team was
+                        professional, fast, and paid attention to every detail.
+                        We’ve been enjoying our backyard more than ever!"</p>
                     <div class=" self-end flex items-center gap-2">
-                        <UAvatar src="https://github.com/benjamincanac.png" />
+                        <UAvatar
+                            src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFufGVufDB8fDB8fHww" />
                         <div>
-                            <p class=" font-title text-sm text-slate-700">Benjamin Canac</p>
+                            <p class=" font-title text-sm text-slate-700">Sarah M</p>
                             <p class=" font-title text-xs text-slate-400">Waterloo,ON</p>
                         </div>
                     </div>
                 </div>
                 <div class=" flex flex-col justify-between p-5 bg-white h-52 rounded-xl shadow-md">
-                    <p class=" font-body text-slate-500 ">"The new deck is absolutely fantastic! The
-                        craftsmanship is top-notch and the team was professional from start to finish. Highly
-                        recommended!"</p>
+                    <p class=" font-body text-slate-500 ">"We hired Hu for fence installation and ongoing
+                        lawn care. Their work is clean, reliable, and always on time. The crew truly cares about
+                        customer satisfaction!"</p>
                     <div class=" self-end flex items-center gap-2">
-                        <UAvatar src="https://github.com/benjamincanac.png" />
+                        <UAvatar
+                            src="https://images.unsplash.com/photo-1563306406-e66174fa3787?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fHdvbWFufGVufDB8fDB8fHww" />
                         <div>
-                            <p class=" font-title text-sm text-slate-700">Benjamin Canac</p>
-                            <p class=" font-title text-xs text-slate-400">Waterloo,ON</p>
+                            <p class=" font-title text-sm text-slate-700">Daniel K</p>
+                            <p class=" font-title text-xs text-slate-400">Cambridge, ON</p>
                         </div>
                     </div>
                 </div>
                 <div class=" flex flex-col justify-between p-5 bg-white h-52 rounded-xl shadow-md">
-                    <p class=" font-body text-slate-500 ">"The new deck is absolutely fantastic! The
-                        craftsmanship is top-notch and the team was professional from start to finish. Highly
-                        recommended!"</p>
+                    <p class=" font-body text-slate-500 ">
+                        "去年冬天雪特别大，多亏了胡的除雪服务，车道都清理得干干净净，非常省心。他们真的很可靠，今年我会继续使用他们的服务。"</p>
                     <div class=" self-end flex items-center gap-2">
-                        <UAvatar src="https://github.com/benjamincanac.png" />
+                        <UAvatar
+                            src="https://plus.unsplash.com/premium_photo-1682093665127-6610b9ccb0dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fHdvbWFuJTIwYXNpYXxlbnwwfHwwfHx8MA%3D%3D" />
                         <div>
-                            <p class=" font-title text-sm text-slate-700">Benjamin Canac</p>
-                            <p class=" font-title text-xs text-slate-400">Waterloo,ON</p>
+                            <p class=" font-title text-sm text-slate-700">Liu</p>
+                            <p class=" font-title text-xs text-slate-400">Kitchener, ON</p>
                         </div>
                     </div>
                 </div>
@@ -118,13 +143,13 @@ const items = [
             class=" md:w-5/7 md:mx-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-10">
             <img src="/carpentry.png" alt="a man is doing carpentry work" class=" w-72 rounded-2xl ">
             <div class=" px-5 md:px-0 md:py-5">
-                <h2 class="text-2xl md:text-4xl font-title text-slate-700">Your Local Outdoor expertise
+                <h2 class="text-2xl md:text-4xl font-title text-slate-700">Trusted Local Landscape Partners
                 </h2>
-                <p class=" font-body mt-5 text-gray-600">Waterloo Carpentry &
-                    Outdoors is a locally-owned business dedicated to enhancing the beauty and functionality of your
-                    outdoor living spaces. We combine years of experience with a passion for quality work, ensuring
-                    every project meets our high standards and your complete satisfaction. Honesty, integrity, and
-                    community are at the heart of everything we do.</p>
+                <p class=" font-body mt-5 text-gray-600">Hu Landscaping is a proud Waterloo-area team building and
+                    maintaining outdoor spaces that reflect the way you live. From tailored deck and fence work to
+                    seasonal lawn and snow services, we blend thoughtful design, long-term durability, and
+                    straight-forward communication so every project is completed with care, transparency, and a focus on
+                    lasting value.</p>
                 <div class=" px-5 md:w-4/5 md:mx-auto grid grid-cols-3 gap-10 mt-10">
                     <div class=" flex flex-col items-center gap-2">
                         <BadgeCheck color="#6A8B64" :size="40"></BadgeCheck>
@@ -159,7 +184,6 @@ const items = [
                             <Mail color="white" :size="22" />
                         </div>
                         <p class=" text-xl font-title font-semibold text-slate-600">kongqihu91@gmail.com</p>
-
                     </div>
                 </div>
             </div>
