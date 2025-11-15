@@ -86,11 +86,13 @@ const imageArr2 = [
             <div class=" mt-10 space-y-10">
                 <UCarousel v-slot="{ item }" loop :auto-scroll="{ direction: 'backward', speed: 1 }" :items="imageArr1"
                     :ui="{ item: 'basis-1/4' }">
-                    <img :src="item" width="600" height="500" fit="cover" class="rounded-xl shadow " />
+                    <img :src="item" width="600" height="500" loading="lazy" alt="Deck and landscaping project"
+                        class="h-64 w-full object-cover rounded-xl shadow" />
                 </UCarousel>
                 <UCarousel v-slot="{ item }" loop :auto-scroll="{ speed: 1 }" :items="imageArr2"
                     :ui="{ item: 'basis-1/4' }">
-                    <img :src="item" width="600" height="500" fit="cover" class="rounded-xl shadow" />
+                    <img :src="item" width="600" height="500" loading="lazy" alt="Deck and landscaping project"
+                        class="h-64 w-full object-cover rounded-xl shadow" />
                 </UCarousel>
             </div>
         </section>
